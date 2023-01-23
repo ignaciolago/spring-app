@@ -27,11 +27,11 @@ spec:
       description: name of the deployment to be patched
       name: deployment-name
       type: string
-    - default: 'https://github.com/kskels/spring-app.git'
+    - default: 'https://github.com/ignaciolago/spring-app.git'
       description: url of the git repo for the code of deployment
       name: git-url
       type: string
-    - default: main
+    - default: app03
       description: revision to be used from repo of the code for deployment
       name: git-revision
       type: string
@@ -39,7 +39,7 @@ spec:
       description: image to be build from the code
       name: IMAGE
       type: string
-    - default: '0.1'
+    - default: '0.3'
       name: IMAGE-TAG
       type: string
   tasks:
