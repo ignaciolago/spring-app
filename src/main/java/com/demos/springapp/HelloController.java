@@ -8,6 +8,6 @@ public class HelloController {
 
     @RequestMapping("/")
     public String home(){
-        return "App02 Welcome's you to the 2023 Tech Exchange!";
+        return "App03 Welcome's you to the 2023 Tech Exchange!";
     }
 }
