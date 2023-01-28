@@ -42,14 +42,14 @@ public class ImageController {
     }
 
     // Return the image from the classpath location using HttpServletResponse
-    @GetMapping(value = "office", produces = MediaType.IMAGE_JPEG_VALUE)
+    @GetMapping(value = "/", produces = MediaType.IMAGE_JPEG_VALUE)
     public void officeAsHttpResponse(HttpServletResponse response) throws IOException {
         int randomNum = random.nextInt((max - min) + 1) + min;
         ClassPathResource imageFile = new ClassPathResource("images/offices/redhatoffice" + randomNum+ ".jpg");
         StreamUtils.copy(imageFile.getInputStream(), response.getOutputStream());
     }
 
-    @GetMapping(value = "/" , produces = MediaType.IMAGE_JPEG_VALUE)
+    @GetMapping(value = "/hello" , produces = MediaType.IMAGE_JPEG_VALUE)
     public void welcomeAsHttpResponse(HttpServletResponse response) throws IOException {
 
         ClassPathResource imageFile = new ClassPathResource("images/welcome.jpg");
