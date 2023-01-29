@@ -7,9 +7,6 @@ metadata:
     app.kubernetes.io/component: spring-app
     app.kubernetes.io/instance: spring-app
 spec:
-  clusterIP: 172.30.46.192
-  ipFamilies:
-    - IPv4
   ports:
     - name: 8080-tcp
       protocol: TCP
@@ -24,8 +21,6 @@ spec:
       port: 8778
       targetPort: 8778
   internalTrafficPolicy: Cluster
-  clusterIPs:
-    - 172.30.46.192
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
