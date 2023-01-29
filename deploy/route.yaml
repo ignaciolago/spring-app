@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: spring-app
+  labels:
+    app: spring-app
+    app.kubernetes.io/component: spring-app
+    app.kubernetes.io/instance: spring-app
+spec:
+  to:
+    kind: Service
+    name: spring-app
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ''
+  port:
+    targetPort: 8080-tcp
