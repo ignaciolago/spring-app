@@ -13,11 +13,8 @@ spec:
       deployment: spring-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         deployment: spring-app
-      annotations:
-        openshift.io/generated-by: OpenShiftNewApp
     spec:
       volumes:
         - name: configmap
